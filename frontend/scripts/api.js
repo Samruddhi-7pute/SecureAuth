@@ -7,7 +7,7 @@
  * PRODUCTION_API_URL value below with your actual Render URL, e.g.
  * "https://secureauth-api.onrender.com/api".
  */
-const PRODUCTION_API_URL = 'https://your-backend-app.onrender.com/api';
+const PRODUCTION_API_URL = 'https://secureauth-awip.onrender.com/api';
 const LOCAL_API_URL = 'http://localhost:5000/api';
 
 const API_BASE_URL = (() => {
