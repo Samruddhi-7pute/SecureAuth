@@ -1,0 +1,226 @@
+/* ==========================================================
+   Auth Pages (Login / Sign Up) — minimal form styling
+   ========================================================== */
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-header {
+  margin-bottom: 24px;
+}
+
+.auth-header {
+  text-align: center;
+}
+
+.auth-header .brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  font-size: 1rem;
+  margin: 0 auto 18px;
+}
+
+.auth-header h1 {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.auth-header p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-size: 0.9rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input-wrapper input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.input-wrapper input.input-error {
+  border-color: var(--danger);
+}
+
+.input-wrapper input.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.input-wrapper input:disabled {
+  background: var(--gray-50);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color var(--transition);
+}
+
+.toggle-password:hover {
+  color: var(--text-secondary);
+}
+
+.field-error {
+  display: block;
+  color: var(--danger);
+  font-size: 0.76rem;
+  margin-top: 5px;
+}
+
+.field-hint {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  margin-top: 5px;
+}
+
+/* ---------- Password strength meter ---------- */
+.strength-meter {
+  margin-top: 8px;
+}
+
+.strength-bars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.strength-bars span {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gray-200);
+  transition: background var(--transition);
+}
+
+.strength-label {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.strength-weak .strength-bars span:nth-child(1) { background: var(--danger); }
+.strength-fair .strength-bars span:nth-child(-n+2) { background: var(--warning); }
+.strength-good .strength-bars span:nth-child(-n+3) { background: #65a30d; }
+.strength-strong .strength-bars span { background: var(--success); }
+
+.strength-weak .strength-label { color: var(--danger); }
+.strength-fair .strength-label { color: var(--warning); }
+.strength-good .strength-label { color: #65a30d; }
+.strength-strong .strength-label { color: var(--success); }
+
+/* ---------- Row helpers ---------- */
+.form-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.checkbox-wrapper input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.forgot-link {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  color: var(--accent-hover);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.auth-switch a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.auth-switch a:hover {
+  color: var(--accent-hover);
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--gray-900);
+  color: white;
+  padding: 11px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 220ms ease;
+  z-index: 200;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

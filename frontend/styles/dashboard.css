@@ -1,0 +1,191 @@
+/* ==========================================================
+   Landing / Dashboard / Profile / 404 — minimal SaaS styling
+   ========================================================== */
+
+/* ---------- Hero (Landing page) ---------- */
+.hero {
+  padding: 120px 24px 100px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  width: auto;
+  padding: 11px 24px;
+}
+
+.hero-note {
+  margin-top: 28px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- App pages (Dashboard / Profile) ---------- */
+.page-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ---------- Dashboard summary card ---------- */
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.avatar-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.summary-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.summary-email {
+  color: var(--text-secondary);
+  font-size: 0.87rem;
+  margin-top: 1px;
+}
+
+.info-list {
+  border-top: 1px solid var(--border);
+}
+
+.info-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.87rem;
+}
+
+.info-list li span:first-child {
+  color: var(--text-secondary);
+}
+
+.info-list li span:last-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ---------- Profile card ---------- */
+.profile-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.profile-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.profile-avatar-row .avatar-circle {
+  width: 56px;
+  height: 56px;
+  font-size: 1.15rem;
+}
+
+/* ---------- 404 page ---------- */
+.error-screen {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.error-code {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--gray-200);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+
+.error-screen h1 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.error-screen p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+  max-width: 360px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 80px 20px 70px;
+  }
+
+  .page-inner {
+    padding: 40px 20px 60px;
+  }
+}

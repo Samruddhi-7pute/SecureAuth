@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — SecureAuth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        SecureAuth
+      </a>
+      <div class="nav-links">
+        <a href="login.html" data-guest-link>Log in</a>
+        <a href="signup.html" data-guest-link class="btn-nav-primary">Sign up</a>
+        <a href="dashboard.html" data-auth-link style="display:none;">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="error-screen">
+    <div class="error-code">404</div>
+    <h1>Page not found</h1>
+    <p>The page you're looking for doesn't exist or may have been moved.</p>
+    <a href="index.html" class="btn btn-primary btn-inline">Back to home</a>
+  </div>
+
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

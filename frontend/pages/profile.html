@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — SecureAuth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/auth.css" />
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="spinner"></div>
+    <p class="text-muted">Loading...</p>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        SecureAuth
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <button data-logout-btn>Log out</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-inner">
+    <div class="page-header">
+      <h1>Profile</h1>
+      <p>Update your account information.</p>
+    </div>
+
+    <div class="card profile-card">
+      <div class="profile-avatar-row">
+        <div class="avatar-circle" id="avatarInitials">?</div>
+      </div>
+
+      <div id="profileAlert" class="alert" role="alert"></div>
+
+      <form id="profileForm" novalidate>
+        <div class="form-group">
+          <label for="profileName">Full name</label>
+          <div class="input-wrapper">
+            <input type="text" id="profileName" name="name" required />
+          </div>
+          <span class="field-error" id="profileNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="profileEmail">Email</label>
+          <div class="input-wrapper">
+            <input type="email" id="profileEmail" name="email" required />
+          </div>
+          <span class="field-error" id="profileEmailError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="saveProfileBtn">Save changes</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; <span id="year"></span> SecureAuth
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/profile.js"></script>
+</body>
+</html>

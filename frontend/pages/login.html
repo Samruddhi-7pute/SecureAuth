@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — SecureAuth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/auth.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        SecureAuth
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="login.html" data-guest-link>Log in</a>
+        <a href="signup.html" data-guest-link class="btn-nav-primary">Sign up</a>
+        <a href="dashboard.html" data-auth-link style="display:none;">Dashboard</a>
+        <a href="profile.html" data-auth-link style="display:none;">Profile</a>
+        <button data-logout-btn data-auth-link style="display:none;">Log out</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="center-screen">
+    <div class="auth-wrapper animate-in">
+      <div class="card">
+        <div class="auth-header">
+          <span class="brand-mark">S</span>
+          <h1>Welcome back</h1>
+          <p>Log in to your account</p>
+        </div>
+
+        <div id="loginAlert" class="alert" role="alert"></div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="passwordError"></span>
+          </div>
+
+          <div class="form-row-between">
+            <label class="checkbox-wrapper">
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+              Remember me
+            </label>
+            <a href="#" class="forgot-link" id="forgotPasswordLink">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="loginBtn">Log in</button>
+        </form>
+
+        <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/login.js"></script>
+</body>
+</html>

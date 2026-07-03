@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureAuth — Simple, secure authentication</title>
+  <meta name="description" content="A minimal, secure authentication system built with Node.js, Express, MongoDB, bcrypt, and JWT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        SecureAuth
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="login.html" data-guest-link>Log in</a>
+        <a href="signup.html" data-guest-link class="btn-nav-primary">Sign up</a>
+        <a href="dashboard.html" data-auth-link style="display:none;">Dashboard</a>
+        <a href="profile.html" data-auth-link style="display:none;">Profile</a>
+        <button data-logout-btn data-auth-link style="display:none;">Log out</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-badge">Authentication, done properly</span>
+    <h1>A secure sign-in system for your product</h1>
+    <p>
+      Hashed passwords, JWT sessions, and protected routes — set up in a
+      weekend, built to hold up in production.
+    </p>
+    <div class="hero-actions">
+      <a href="signup.html" class="btn btn-primary">Create account</a>
+      <a href="login.html" class="btn btn-secondary">Log in</a>
+    </div>
+    <p class="hero-note">No credit card required. Takes about a minute to set up.</p>
+  </section>
+
+  <footer class="footer">
+    &copy; <span id="year"></span> SecureAuth
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
